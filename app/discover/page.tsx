@@ -14,6 +14,7 @@ export default function DiscoverVibe() {
   const categories = ['All', ...Array.from(new Set(professionals.flatMap(p => p.categories)))];
 
 
+
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 60 },
     visible: { 
