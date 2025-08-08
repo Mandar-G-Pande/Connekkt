@@ -4,7 +4,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  typescript: {
+    tsconfigPath: './tsconfig.json', // Explicitly point to your config
+  },
   images: { unoptimized: true },
 };
 
-module.exports = nextConfig;
+module.exports = nextConfig; 
