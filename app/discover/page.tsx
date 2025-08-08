@@ -11,7 +11,8 @@ import Image from 'next/image';
 export default function DiscoverVibe() {
   const [activeCategory, setActiveCategory] = useState('All');
   
-  const categories = ['All', ...Array.from(new Set(professionals.flatMap(p => p.categories)))];
+  const uniqueCategories = new Set(professionals.flatMap(p => p.categories));
+  const categories = ['All', ...Array.from(uniqueCategories)];
 
 
 
