@@ -11,7 +11,8 @@ import Image from 'next/image';
 export default function DiscoverVibe() {
   const [activeCategory, setActiveCategory] = useState('All');
   
-  const categories = ['All', ...new Set(professionals.flatMap(p => p.categories))];
+  const categories = ['All', ...Array.from(new Set(professionals.flatMap(p => p.categories)))];
+
 
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 60 },
